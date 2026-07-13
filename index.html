@@ -502,35 +502,40 @@ footer a:hover{color:var(--gold-light);}
     </div>
   </section>
 */
-          <!-- 3.1 Foto -->
+                <!-- 3.1 Foto -->
       <article class="subpage" data-page="galeri" data-sub="foto">
         <h2 style="font-size:1.5rem;">Galeri Foto Kegiatan</h2>
         <div class="gallery-note" style="margin:20px 0 24px;">
-          📁 Album foto diambil otomatis dari folder Google Drive madrasah. Untuk menambah foto, cukup unggah gambar baru ke folder Drive tersebut — album di bawah akan menampilkannya secara otomatis. Lihat tutorial "Mengatur Folder Google Drive untuk Galeri".
+          📁 Album foto diambil otomatis dari folder Google Drive madrasah. Untuk menambah foto, cukup unggah gambar baru ke folder Drive tersebut — album di bawah akan menampilkannya secara otomatis.
         </div>
-        <!-- Foto gabungan tampil penuh layar -->
-        <iframe class="gallery-frame" id="driveFolderFoto"
-          src="https://drive.google.com/file/d/1l6raD3nEJhtObXhbk4GJQ7jbCHWXmajR/preview"
-          loading="lazy"
-          title="Foto kegiatan Madrasah"
-          style="width:100%; height:100vh; border:none;">
-        </iframe>
+        <div class="gallery-frame" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+          <!-- Contoh foto satu per satu -->
+          <iframe src="https://drive.google.com/file/d/ID_FOTO_1/preview"
+                  style="width:300px; height:200px; border:none;" loading="lazy"></iframe>
+          <iframe src="https://drive.google.com/file/d/ID_FOTO_2/preview"
+                  style="width:300px; height:200px; border:none;" loading="lazy"></iframe>
+          <iframe src="https://drive.google.com/file/d/ID_FOTO_3/preview"
+                  style="width:300px; height:200px; border:none;" loading="lazy"></iframe>
+          <!-- Tambahkan sesuai jumlah foto -->
+        </div>
       </article>
 
       <!-- 3.2 Video -->
       <article class="subpage" data-page="galeri" data-sub="video">
         <h2 style="font-size:1.5rem;">Galeri Video</h2>
         <div class="gallery-note" style="margin:20px 0 24px;">
-          🎬 Video kegiatan disimpan di folder Google Drive terpisah agar tidak membebani ukuran situs. Tambahkan video baru langsung ke folder Drive video.
+          🎬 Video kegiatan disimpan di folder Google Drive terpisah agar tidak membebani ukuran situs.
         </div>
-        <!-- Video tampil penuh layar dengan kontrol -->
-        <iframe class="gallery-frame" id="driveFolderVideo"
-          src="https://drive.google.com/file/d/1fG2gtz4KmqojISpSSmcPkIP34_IRw2Pm/preview"
-          loading="lazy"
-          title="Video kegiatan Madrasah"
-          style="width:100%; height:100vh; border:none;">
-        </iframe>
+        <div class="gallery-frame" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+          <!-- Contoh video satu per satu -->
+          <iframe src="https://drive.google.com/file/d/1i_EbjKjUX7zjvfhcehcKBsUTZS3CUKnh/preview"
+                  style="width:400px; height:300px; border:none;" loading="lazy"></iframe>
+          <iframe src="https://drive.google.com/file/d/ID_VIDEO_2/preview"
+                  style="width:400px; height:300px; border:none;" loading="lazy"></iframe>
+          <!-- Tambahkan sesuai jumlah video -->
+        </div>
       </article>
+
 
 
   <!-- ============================================================
