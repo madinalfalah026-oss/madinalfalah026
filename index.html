@@ -455,7 +455,7 @@ footer a:hover{color:var(--gold-light);}
       </article>
     </div>
   </section>
-
+/*
 <!-- ============================================================
        3. GALERI
   ============================================================ -->
@@ -501,7 +501,51 @@ footer a:hover{color:var(--gold-light);}
       </article>
     </div>
   </section>
+*/
+     <!-- ============================================================
+       3. GALERI
+  ============================================================ -->
+  <section class="page-section" data-page="galeri">
+    <div class="container">
+      <div class="page-head">
+        <div class="eyebrow">Galeri</div>
+        <h2>Dokumentasi Kegiatan Madrasah</h2>
+        <p class="desc">Foto dan video ini diambil langsung dari folder Google Drive madrasah, sehingga pengurus dapat memperbarui isinya tanpa mengubah kode situs.</p>
+      </div>
+      <div class="subnav" data-subnav="galeri">
+        <button data-sub="foto">Galeri Foto</button>
+        <button data-sub="video">Galeri Video</button>
+        <button data-sub="prestasi">Prestasi Santri</button>
+      </div>
 
+      <!-- 3.1 Foto -->
+      <article class="subpage" data-page="galeri" data-sub="foto">
+        <h2 style="font-size:1.5rem;">Galeri Foto Kegiatan</h2>
+        <div class="gallery-note" style="margin:20px 0 24px;">
+          📁 Album diambil otomatis dari folder Google Drive madrasah. Operator cukup menambah/mengganti foto di folder tersebut, situs akan menampilkannya otomatis.
+        </div>
+        <iframe class="gallery-frame" data-drivefolder="folderGaleriFoto" src="" loading="lazy" title="Folder Galeri Foto Kegiatan"></iframe>
+      </article>
+
+      <!-- 3.2 Video -->
+      <article class="subpage" data-page="galeri" data-sub="video">
+        <h2 style="font-size:1.5rem;">Galeri Video</h2>
+        <div class="gallery-note" style="margin:20px 0 24px;">
+          🎬 Video diambil otomatis dari folder Google Drive. Operator cukup mengunggah file video baru ke folder tersebut — klik salah satu video di bawah untuk memutarnya.
+        </div>
+        <iframe class="gallery-frame" data-drivefolder="folderGaleriVideo" src="" loading="lazy" title="Folder Galeri Video"></iframe>
+      </article>
+
+      <!-- 3.3 Prestasi -->
+      <article class="subpage" data-page="galeri" data-sub="prestasi">
+        <h2 style="font-size:1.5rem;">Prestasi Santri</h2>
+        <div class="gallery-note" style="margin:20px 0 24px;">
+          🏆 Diambil otomatis dari folder Google Drive. Operator cukup menambah/mengganti foto piagam atau prestasi di folder tersebut.
+        </div>
+        <iframe class="gallery-frame" data-drivefolder="folderPrestasi" src="" loading="lazy" title="Folder Prestasi Santri"></iframe>
+      </article>
+    </div>
+  </section>
   <!-- ============================================================
        4. PENDAFTARAN
   ============================================================ -->
@@ -694,7 +738,37 @@ const KONFIGURASI = {
   facebook: "https://facebook.com/alfalahmalang",
   youtube: "https://youtube.com/@alfalahmalang"
 };
+/* ============================================================
+   DRIVE — SATU-SATUNYA BAGIAN YANG (SEHARUSNYA) TIDAK PERNAH
+   DIUBAH LAGI. Isinya cuma ID folder/file Google Drive.
 
+   OPERATOR TIDAK PERLU BUKA BAGIAN INI SAMA SEKALI.
+   Cukup buka folder Drive terkait, lalu tambah/hapus/ganti file
+   di dalamnya. Situs otomatis menampilkan isi folder terbaru.
+
+   - folderXxx  = ID folder Drive (isi boleh banyak file, situs
+                  menampilkan galeri/daftar isi folder tsb)
+   - fileXxx    = ID satu file Drive (untuk mengganti gambarnya,
+                  gunakan "Kelola versi" / "Manage versions" di
+                  Drive pada file yang sama — ID tidak berubah)
+   ============================================================ */
+const DRIVE = {
+  // --- Folder (operator cukup ubah isi folder di Drive) ---
+  folderSambutan:        "1vTqL2UrXmCOyioPbCLaU6m8FxE7DUxr4", // Sambutan Kepala Madrasah & Sekilas Madrasah
+  folderVisiMisiTujuan:  "1Ne7hSsQXBdNEMKT_VYJgAQoE2jrvCgzA", // Visi, Misi & Tujuan
+  folderBerita:          "1EhDBj9p1hkAtXHMCOpXIhZ16Y72svP9z", // Berita & Pengumuman (Pengumuman/Kegiatan/Libur)
+  folderUstadzUstadzah:  "1B2n_qSAEvGE1ciokNHeYzFSsN6gKE7Iu", // Ustadz & Ustadzah
+  folderTendik:          "1Qck3l08G6GMcpNWQCzHx6ScTokLV4XMP", // Tenaga Kependidikan (TENDIK)
+  folderGaleriFoto:      "14lkudqFKALm6FHzrd4HCMv__OOU2C4ch", // Galeri Foto Kegiatan
+  folderGaleriVideo:     "1QdBZ5bYM5jtWxJqfACP9RUQ4uzg2586U", // Galeri Video
+  folderPrestasi:        "1gqQhS7veSFliYGD31uRc-auPoJxPzcdc", // Prestasi Santri
+  folderSyaratDaftar:    "1Tq6XjbZogKEleT1R7CKCQmbw3spT4Z-S", // Syarat & Cara Daftar
+
+  // --- File tunggal (ganti isi filenya lewat "Kelola versi" di Drive) ---
+  fileSejarah:            "1SrnOJH81Dp8GlRU9EElmH5AEgdnymUNn", // Sejarah Singkat
+  fileStrukturPengurus:   "1xbcW9oqElLkcWwDpFZCQisNaFEA3xwk2", // Struktur Pengurus
+  fileKurikulum:          "1EVmEr44CMjJRGOPAVLBAJ5hGMabS2G2E"  // Kurikulum & Program Pembelajaran
+};
 /* ============================================================
    STRUKTUR NAVIGASI
    ============================================================ */
