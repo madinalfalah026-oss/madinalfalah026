@@ -387,7 +387,7 @@ footer a:hover{color:var(--gold-light);}
   </section>
 
 <!-- ============================================================
-       2. PROFIL - FINAL 4 TOMBOL + AUTO TUTUP
+       PROFIL - FINAL 4 TOMBOL LENGKAP - TINGGAL PASTE
   ============================================================ -->
   <section class="page-section" data-page="profil">
     <div class="container">
@@ -396,15 +396,41 @@ footer a:hover{color:var(--gold-light);}
         <h2>Mengenal Madrasah Diniyah Al Falah</h2>
         <p class="desc">Sejarah, struktur pengajar, dan kurikulum yang kami terapkan dalam mendidik santri.</p>
       </div>
+
+      <!-- TOMBOL 4 - SUDAH DIPERBAIKI BIAR MUNCUL SEMUA -->
+      <style>
+        .subnav[data-subnav="profil"]{
+          display:flex !important;
+          flex-wrap:wrap !important;
+          gap:8px !important;
+          overflow:visible !important;
+        }
+        .subnav[data-subnav="profil"] button{
+          flex:1 1 auto !important;
+          min-width:135px;
+          padding:10px 14px !important;
+          border-radius:8px;
+          border:1px solid #d9e2dc;
+          background:#f6f8f7;
+          cursor:pointer;
+          font-weight:600;
+        }
+        .subnav[data-subnav="profil"] button.active,
+        .subnav[data-subnav="profil"] button:hover{
+          background:#0d6e3f !important;
+          color:#fff !important;
+          border-color:#0d6e3f !important;
+        }
+      </style>
       <div class="subnav" data-subnav="profil">
-        <button data-sub="sejarah">Sejarah Singkat</button>
+        <button data-sub="sejarah" class="active">Sejarah Singkat</button>
         <button data-sub="struktur-org">Struktur Organisasi</button>
         <button data-sub="struktur">Ustadz/Ustadzah</button>
         <button data-sub="kurikulum">Kurikulum &amp; Program</button>
       </div>
 
-      <!-- 2.1 Sejarah -->
-      <article class="subpage" data-page="profil" data-sub="sejarah">
+      <!-- 1. SEJARAH -->
+      <article class="subpage active" data-page="profil" data-sub="sejarah">
         <h2 style="font-size:1.5rem;">Sejarah Singkat</h2>
         <div class="timeline" style="margin-top:24px;">
           <div class="item"><div class="yr">2005</div><p>Madrasah Diniyah Al Falah didirikan atas prakarsa tokoh masyarakat dan takmir masjid setempat, diawali dengan dua kelas mengaji sederhana.</p></div>
@@ -414,23 +440,18 @@ footer a:hover{color:var(--gold-light);}
         </div>
       </article>
 
-      <!-- 2.2 BARU : STRUKTUR ORGANISASI - 500x700 -->
+      <!-- 2. STRUKTUR ORGANISASI - BARU - 500x700 -->
       <article class="subpage" data-page="profil" data-sub="struktur-org">
         <h2 style="font-size:1.5rem;">Struktur Organisasi</h2>
         <p style="margin-top:8px;color:#666;font-size:14px;">Bagan struktur kepengurusan Madrasah Diniyah Al Falah.</p>
-        <style>
-          .struktur-wrap{background:#fff;border:1px solid #eee;border-radius:12px;padding:15px;margin-top:18px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-          .struktur-wrap img{width:500px;height:700px;max-width:100%;object-fit:contain;display:block;margin:0 auto;background:#f9f9f9;border-radius:8px}
-          .struktur-wrap .ket{margin-top:10px;font-size:13px;color:#888}
-        </style>
-        <div class="struktur-wrap">
-          <!-- GANTI ID DI BAWAH INI DENGAN ID FOTO STRUKTUR ORGANISASI KAMU -->
-          <img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w500-h700" alt="Struktur Organisasi">
-          <div class="ket">Ukuran asli 500x700 | Ganti ID pada link src untuk mengganti foto</div>
+        <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:15px;margin-top:18px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.06)">
+          <!-- GANTI ID DISINI UNTUK FOTO STRUKTUR ORGANISASI -->
+          <img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w500-h700" alt="Struktur Organisasi" style="width:500px;height:700px;max-width:100%;object-fit:contain;display:block;margin:0 auto;background:#f9f9f9;border-radius:8px">
+          <div style="margin-top:10px;font-size:12px;color:#888">Ukuran 500 x 700 | Ganti ID pada link untuk ganti foto</div>
         </div>
       </article>
 
-      <!-- 2.3 Ustadz / Ustadzah - 200x250 -->
+      <!-- 3. USTADZ / USTADZAH - 200x250 -->
       <article class="subpage" data-page="profil" data-sub="struktur">
         <h2 style="font-size:1.5rem;">Dewan Asatidz</h2>
         <p style="margin-top:8px;color:#666;font-size:14px;">Klik tombol untuk menampilkan foto dewan ustadz/ustadzah.</p>
@@ -438,16 +459,13 @@ footer a:hover{color:var(--gold-light);}
           .btn-ustadz{background:#0d6e3f;color:#fff;border:none;padding:12px 20px;border-radius:8px;font-weight:bold;cursor:pointer;width:100%;font-size:16px;margin-top:18px}
           .btn-ustadz:hover{background:#0a5732}
           #galeri-ustadz{display:none;margin-top:20px;grid-template-columns:repeat(2,1fr);gap:12px}
-          #galeri-ustadz.tampil{display:grid; animation: fadeIn .3s ease;}
+          #galeri-ustadz.tampil{display:grid}
           @media(min-width:700px){#galeri-ustadz{grid-template-columns:repeat(4,1fr)}}
           .card-ustadz{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,.08);text-align:center;border:1px solid #eee}
           .card-ustadz img{width:200px;height:250px;max-width:100%;object-fit:cover;display:block;margin:0 auto;background:#f2f2f2}
           .card-ustadz .nama{padding:8px;font-size:13px;font-weight:600}
-          @keyframes fadeIn{from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)}}
         </style>
-
         <button class="btn-ustadz" id="btn-ustadz" onclick="toggleUstadz()">▶ BUKA FOTO USTADZ / USTADZAH</button>
-
         <div id="galeri-ustadz">
           <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250"><div class="nama">Ustadz 1</div></div>
           <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250"><div class="nama">Ustadz 2</div></div>
@@ -458,27 +476,24 @@ footer a:hover{color:var(--gold-light);}
           <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250"><div class="nama">Ustadz 7</div></div>
           <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250"><div class="nama">Ustadz 8</div></div>
         </div>
-
         <script>
           function toggleUstadz(){
-            var galeri = document.getElementById('galeri-ustadz');
-            var btn = document.getElementById('btn-ustadz');
-            galeri.classList.toggle('tampil');
-            btn.innerHTML = galeri.classList.contains('tampil') ? '▼ TUTUP FOTO USTADZ / USTADZAH' : '▶ BUKA FOTO USTADZ / USTADZAH';
-            if(galeri.classList.contains('tampil')) galeri.scrollIntoView({behavior:'smooth', block:'start'});
+            var g=document.getElementById('galeri-ustadz');
+            var b=document.getElementById('btn-ustadz');
+            g.classList.toggle('tampil');
+            b.innerHTML=g.classList.contains('tampil')?'▼ TUTUP FOTO USTADZ / USTADZAH':'▶ BUKA FOTO USTADZ / USTADZAH';
+            if(g.classList.contains('tampil')) g.scrollIntoView({behavior:'smooth'});
           }
-          // Auto tutup galeri kalau pindah sub halaman lain
-          document.addEventListener('click', function(e){
-            if(e.target.matches('[data-sub]') && e.target.getAttribute('data-sub') !== 'struktur'){
-              var g = document.getElementById('galeri-ustadz');
-              var b = document.getElementById('btn-ustadz');
-              if(g){ g.classList.remove('tampil'); b.innerHTML = '▶ BUKA FOTO USTADZ / USTADZAH'; }
+          document.addEventListener('click',function(e){
+            if(e.target.matches('[data-sub]') && e.target.getAttribute('data-sub')!=='struktur'){
+              var g=document.getElementById('galeri-ustadz'); var b=document.getElementById('btn-ustadz');
+              if(g){g.classList.remove('tampil'); if(b) b.innerHTML='▶ BUKA FOTO USTADZ / USTADZAH';}
             }
           });
         </script>
       </article>
 
-      <!-- 2.4 Kurikulum -->
+      <!-- 4. KURIKULUM -->
       <article class="subpage" data-page="profil" data-sub="kurikulum">
         <h2 style="font-size:1.5rem;">Kurikulum &amp; Program Pembelajaran</h2>
         <table class="tbl" style="margin-top:24px;">
