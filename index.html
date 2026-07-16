@@ -413,29 +413,35 @@ footer a:hover{color:var(--gold-light);}
         </div>
       </article>
 
-      <!-- 2.2 Struktur -->
-<article class="subpage" data-page="profil" data-sub="struktur">
-        <h2 style="font-size:1.5rem;">Struktur Organisasi &amp; Ustadz/Ustadzah</h2>
-        <div class="card" style="margin:24px 0 32px;">
-          <h3 style="font-size:1rem; margin-bottom:10px;">Struktur Pengurus</h3>
-           <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-        </div>
-  
-          <div class="grid grid-3">
-            <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-           <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-           <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-            <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-           <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-           <iframe src="https://drive.google.com/file/d/1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u/preview"
-                  style="width:280px; height:300px; border:none;" loading="lazy"></iframe>
-        </div>
+   <!-- ===== KODING USTADZ 200x250 - TINGGAL PASTE ===== -->
+<style>
+  .ustadz-section{max-width:1100px;margin:auto;padding:15px;font-family:sans-serif}
+  .btn-ustadz{background:#0d6e3f;color:#fff;border:none;padding:12px 20px;border-radius:8px;font-weight:bold;cursor:pointer;width:100%;font-size:16px}
+  #galeri-ustadz{display:none;margin-top:20px;grid-template-columns:repeat(2,1fr);gap:12px}
+  #galeri-ustadz.tampil{display:grid}
+  @media(min-width:700px){#galeri-ustadz{grid-template-columns:repeat(4,1fr)}}
+  .card-ustadz{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,.08);text-align:center;border:1px solid #eee}
+  .card-ustadz img{width:200px;height:250px;max-width:100%;object-fit:cover;display:block;margin:0 auto;background:#f2f2f2}
+</style>
+
+<div class="ustadz-section">
+  <button class="btn-ustadz" onclick="document.getElementById('galeri-ustadz').classList.toggle('tampil'); this.innerText = document.getElementById('galeri-ustadz').classList.contains('tampil') ? '▼ TUTUP USTADZ' : '▶ BUKA USTADZ'">▶ BUKA USTADZ</button>
+
+  <div id="galeri-ustadz">
+    <!-- FOTO 1 - 6 (Link sudah jadi 200x250) -->
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 1"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 2"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 3"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 4"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 5"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 6"></div>
+
+    <!-- Tambahan slot 7 & 8 kalau nanti ada foto baru, tinggal ganti ID nya -->
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 7"></div>
+    <div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w200-h250" alt="Ustadz 8"></div>
+  </div>
+</div>
+<!-- ===== SELESAI ===== -->
       </article>
 
 
