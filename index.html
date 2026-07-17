@@ -672,70 +672,124 @@ footer a:hover{color:var(--gold-light);}
       </article>
     </div>
   </section>
-
-  <!-- ============================================================
-       5. KONTAK
+<!-- ============================================================
+       4. KONTAK - FINAL 2 SUB HALAMAN - WA OTOMATIS & MAP - PASTE
   ============================================================ -->
-  <section class="page-section" data-page="kontak">
-    <div class="container">
-      <div class="page-head">
-        <div class="eyebrow">Kontak</div>
-        <h2>Hubungi Kami</h2>
-        <p class="desc">Kami siap menjawab pertanyaan seputar pendaftaran maupun kegiatan madrasah.</p>
-      </div>
-      <div class="subnav" data-subnav="kontak">
-        <button data-sub="lokasi">Alamat &amp; Lokasi</button>
-        <button data-sub="person">Kontak Person</button>
-        <button data-sub="sosial">Media Sosial</button>
-      </div>
-
-      <!-- 5.1 Lokasi -->
-      <article class="subpage" data-page="kontak" data-sub="lokasi">
-        <h2 style="font-size:1.5rem;">Alamat &amp; Peta Lokasi</h2>
-        <div class="grid grid-2" style="margin-top:24px; align-items:start;">
-          <div class="card">
-            <p style="font-size:.95rem;">Jl. Kendalisodo No. 25,<br>Kota Malang, Jawa Timur 65100</p>
-            <p style="margin-top:14px; font-size:.85rem; color:#4B5D53;">Ganti alamat ini sesuai lokasi madrasah pada bagian KONFIGURASI di kode situs.</p>
-          </div>
-          <iframe class="map-frame" id="mapsEmbed" src="" loading="lazy" title="Peta lokasi madrasah"></iframe>
-        </div>
-      </article>
-
-      <!-- 5.2 Kontak person -->
-      <article class="subpage" data-page="kontak" data-sub="person">
-        <h2 style="font-size:1.5rem;">Kontak Person</h2>
-        <div class="grid grid-2" style="margin-top:24px;">
-          <div class="card contact-card">
-            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 0 1-2 2c-9 0-16-7-16-16a2 2 0 0 1 2-2h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2z"/></svg></span>
-            <div>
-              <b>Tata Usaha Madrasah</b>
-              <p style="font-size:.9rem; color:#4B5D53; margin:4px 0 10px;">Informasi pendaftaran &amp; administrasi.</p>
-              <a id="waTU" href="#" target="_blank" rel="noopener" style="color:var(--emerald); font-weight:700;">Chat via WhatsApp → 08113666460</a>
-            </div>
-          </div>
-          <div class="card contact-card">
-            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg></span>
-            <div>
-              <b>Email Madrasah</b>
-              <p style="font-size:.9rem; color:#4B5D53; margin:4px 0 10px;">Untuk surat resmi &amp; kerja sama.</p>
-              <a id="emailLink" href="#" style="color:var(--emerald); font-weight:700;">Kirim Email →, madinalfalah@gmail.com</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5.3 Sosial -->
-      <article class="subpage" data-page="kontak" data-sub="sosial">
-        <h2 style="font-size:1.5rem;">Media Sosial</h2>
-        <div class="social-row" style="margin-top:24px;">
-          <a class="social-chip" id="sIG" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg> Instagram</a>
-          <a class="social-chip" id="sFB" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9z"/></svg> Facebook</a>
-          <a class="social-chip" id="sYT" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10l4 2-4 2z"/></svg> YouTube</a>
-        </div>
-      </article>
+<section class="page-section" data-page="kontak">
+  <div class="container">
+    <div class="page-head">
+      <div class="eyebrow">Kontak</div>
+      <h2>Hubungi Kami</h2>
+      <p class="desc">Silakan hubungi pengurus Madin Al Falah melalui WhatsApp atau datang langsung ke lokasi.</p>
     </div>
-  </section>
-</main>
+
+    <style>
+      .subnav[data-subnav="kontak"]{display:flex!important;flex-wrap:wrap!important;gap:8px!important;}
+      .subnav[data-subnav="kontak"] button{flex:1 1 auto!important;min-width:130px;padding:10px 14px!important;border-radius:8px;border:1px solid #d9e2dc;background:#f6f8f7;font-weight:600;cursor:pointer}
+      .subnav[data-subnav="kontak"] button.active{background:#0d6e3f!important;color:#fff!important;border-color:#0d6e3f!important;}
+
+      .page-section[data-page="kontak"] .subpage{display:none!important;}
+      .page-section[data-page="kontak"] .subpage.active{display:block!important;animation:fadeIn .25s ease;}
+
+      .kontak-card{background:#fff;border:1px solid #eee;border-radius:14px;padding:18px;box-shadow:0 4px 14px rgba(0,0,0,.05);margin-top:16px;display:flex;align-items:center;gap:14px}
+      .kontak-icon{width:48px;height:48px;background:#e6f4eb;color:#0d6e3f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+      .kontak-info{flex:1}
+      .kontak-info h4{margin:0 0 4px;font-size:15px}
+      .kontak-info p{margin:0;color:#666;font-size:13px}
+      .btn-wa{display:inline-block;margin-top:8px;background:#25D366;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px}
+      .btn-wa:hover{background:#1ebe5d}
+      .btn-telp{display:inline-block;margin-top:8px;margin-left:6px;background:#f1f1f1;color:#333;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px;border:1px solid #ddd}
+
+      .map-wrap{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);margin-top:18px;text-align:center}
+      .map-wrap img{width:100%;max-width:600px;height:auto;max-height:400px;object-fit:cover;display:block;margin:0 auto;background:#f2f2f2}
+      .map-link{display:block;padding:14px;background:#0d6e3f;color:#fff;text-decoration:none;font-weight:700;text-align:center}
+      .map-link:hover{background:#0a5732}
+      @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    </style>
+
+    <div class="subnav" data-subnav="kontak">
+      <button data-sub="kontak-person" class="active">Kontak Person</button>
+      <button data-sub="lokasi">Lokasi</button>
+    </div>
+
+    <!-- 4.1 Kontak Person - KLIK LANGSUNG WA OTOMATIS -->
+    <article class="subpage active" data-page="kontak" data-sub="kontak-person">
+      <h2 style="font-size:1.5rem;">Kontak Person</h2>
+      <p style="margin-top:6px;color:#666;font-size:13px">Klik tombol WhatsApp, chat akan otomatis terisi. Atau klik Telepon untuk langsung menelepon.</p>
+
+      <!-- KONTAK 1 -->
+      <div class="kontak-card">
+        <div class="kontak-icon">📱</div>
+        <div class="kontak-info">
+          <h4>Pengurus 1 - Madin Al Falah</h4>
+          <p>0811-3666-460</p>
+          <!-- Pesan otomatis yang akan terkirim -->
+          <a class="btn-wa" target="_blank" href="https://wa.me/628113666460?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a>
+          <a class="btn-telp" href="tel:+628113666460">📞 Telepon</a>
+        </div>
+      </div>
+
+      <!-- KONTAK 2 -->
+      <div class="kontak-card">
+        <div class="kontak-icon">📱</div>
+        <div class="kontak-info">
+          <h4>Pengurus 2 - Madin Al Falah</h4>
+          <p>0811-2339-2370</p>
+          <a class="btn-wa" target="_blank" href="https://wa.me/6281123392370?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a>
+          <a class="btn-telp" href="tel:+6281123392370">📞 Telepon</a>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;background:#f0faf4;border:1px dashed #a8d5ba;padding:12px;border-radius:10px;font-size:13px;color:#2d5a3d">
+        ℹ️ Pesan otomatis yang terkirim adalah: <br><i>"Assalamualaikum, saya ingin bertanya tentang Madin Al Falah"</i><br>
+        Jika ingin balasan otomatis dari Admin berbunyi <b>"Asalamualaikum, ini dengan Madin Al Falah, apa ada yang bisa saya bantu..?"</b> itu diatur di pengaturan WhatsApp Business -> Pesan Sapaan Otomatis, bukan dari website.
+      </div>
+    </article>
+
+    <!-- 4.2 Lokasi - GAMBAR JPG + LINK GOOGLE MAP -->
+    <article class="subpage" data-page="kontak" data-sub="lokasi">
+      <h2 style="font-size:1.5rem;">Lokasi Madrasah</h2>
+      <p style="margin-top:6px;color:#666;font-size:13px">Klik gambar atau tombol di bawah untuk membuka Google Maps.</p>
+
+      <div class="map-wrap">
+        <!-- GANTI ID INI DENGAN FOTO PETA JPG KAMU - UKURAN 600x400 DISARANKAN -->
+        <a href="https://maps.google.com/?q=Madin+Al+Falah" target="_blank">
+          <img src="https://drive.google.com/thumbnail?id=1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u&sz=w600-h400" alt="Peta Lokasi Madin Al Falah">
+        </a>
+        <!-- GANTI LINK GOOGLE MAPS DI BAWAH INI DENGAN LINK MAP ASLI MADRASAH -->
+        <a class="map-link" target="_blank" href="https://maps.google.com/?q=Madin+Al+Falah">
+          📍 Buka di Google Maps - Klik Disini
+        </a>
+      </div>
+
+      <div style="margin-top:16px;font-size:14px;line-height:1.6">
+        <b>Alamat:</b><br>
+        Madrasah Diniyah Al Falah<br>
+        [Tulis alamat lengkap madrasah di sini]<br>
+        Kec. ..., Kab. ..., Jawa Timur
+      </div>
+    </article>
+
+    <script>
+      (function(){
+        var nav=document.querySelector('.subnav[data-subnav="kontak"]');
+        if(!nav) return;
+        nav.addEventListener('click',function(e){
+          var btn=e.target.closest('button[data-sub]');
+          if(!btn) return;
+          var target=btn.getAttribute('data-sub');
+          nav.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+          btn.classList.add('active');
+          document.querySelectorAll('.page-section[data-page="kontak"] .subpage').forEach(p=>{
+            p.classList.toggle('active', p.getAttribute('data-sub')===target);
+          });
+        });
+      })();
+    </script>
+
+  </div>
+</section>
+  
 
 <!-- ============================================================
      FOOTER
