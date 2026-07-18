@@ -196,13 +196,13 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
 .struktur-empty p{font-size:.82rem}
 
 /* ============ USTADZ ============ */
-.btn-ustadz{display:inline-flex;align-items:center;gap:10px;background:var(--emerald);color:#fff;border:none;padding:14px 24px;border-radius:999px;font-weight:700;cursor:pointer;font-size:.9rem;margin-top:20px;transition:.2s var(--ease);box-shadow:var(--shadow-sm)}
-.btn-ustadz:hover{background:var(--emerald-soft);transform:translateY(-2px);box-shadow:var(--shadow)}
-.btn-ustadz .chev{transition:transform .3s}
-.btn-ustadz.open .chev{transform:rotate(180deg)}
-#galeri-ustadz{display:grid;grid-template-columns:1fr;gap:0;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s var(--ease),opacity .4s var(--ease),margin .4s;margin-top:0}
-#galeri-ustadz.tampil{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-height:2000px;opacity:1;margin-top:22px}
-@media(min-width:700px){#galeri-ustadz.tampil{grid-template-columns:repeat(4,1fr)}}
+.btn-toggle-foto{display:inline-flex;align-items:center;gap:10px;background:var(--emerald);color:#fff;border:none;padding:14px 24px;border-radius:999px;font-weight:700;cursor:pointer;font-size:.9rem;margin-top:20px;transition:.2s var(--ease);box-shadow:var(--shadow-sm)}
+.btn-toggle-foto:hover{background:var(--emerald-soft);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-toggle-foto .chev{transition:transform .3s}
+.btn-toggle-foto.open .chev{transform:rotate(180deg)}
+.foto-toggle-grid{display:grid;grid-template-columns:1fr;gap:0;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s var(--ease),opacity .4s var(--ease),margin .4s;margin-top:0}
+.foto-toggle-grid.tampil{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-height:2000px;opacity:1;margin-top:22px}
+@media(min-width:700px){.foto-toggle-grid.tampil{grid-template-columns:repeat(4,1fr)}}
 .card-ustadz{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-sm);text-align:center;border:1px solid var(--line);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
 .card-ustadz:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card-ustadz img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--sage)}
@@ -268,7 +268,7 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
   <div class="topbar">
     <div class="brand">
       <div class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0A342A"><path d="M12 2L13.5 8.5H20L14.75 12.5L16.25 19L12 14.75L7.75 19L9.25 12.5L4 8.5H10.5L12 2Z"/></svg></div>
-      <div class="brand-text"><div class="name">MDTU Al Falah Kota Malang</div><div class="sub">NISM 311235730225</div></div>
+      <div class="brand-text"><div class="name">MDTU Al Falah</div><div class="sub">Kota Malang</div></div>
     </div>
     <nav class="mainnav" id="desktopNav"></nav>
     <button class="burger" id="burgerBtn" aria-label="Buka menu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
@@ -282,7 +282,7 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
   <div class="container hero-inner">
     <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
     <h1>Membina Generasi Qur'ani Sejak Dini</h1>
-    <p class="lead">Madrasah Diniyah Takmiliyah Ula Al Falah Kota Malang — tempat belajar Al-Qur'an, akidah, fikih, dan akhlak dengan suasana menyenangkan. Diselenggarakan sore hari sampai petang, tidak mengganggu jam sekolah</p>
+    <p class="lead">Madrasah Diniyah Takmiliyah Ula Al Falah Kota Malang — tempat belajar Al-Qur'an, akidah, fikih, dan akhlak dengan suasana menyenangkan.</p>
     <div class="btn-row">
       <a class="btn btn-gold" href="#pendaftaran-formulir" onclick="gotoPage('pendaftaran','formulir')">Daftar Santri Baru</a>
       <a class="btn btn-outline" href="#profil-sejarah" onclick="gotoPage('profil','sejarah')">Kenali Madrasah</a>
@@ -356,7 +356,7 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
 <section class="page-section" data-page="profil">
   <div class="container">
     <div class="page-head"><div class="eyebrow">Profil</div><h2>Mengenal Madrasah Diniyah Al Falah</h2><p class="desc">Sejarah, struktur pengajar, dan kurikulum.</p></div>
-    <div class="subnav" data-subnav="profil"><button data-sub="sejarah">Sejarah Singkat</button><button data-sub="struktur-org">Struktur Organisasi</button><button data-sub="struktur">Ustadz/Ustadzah</button><button data-sub="kurikulum">Kurikulum</button></div>
+    <div class="subnav" data-subnav="profil"><button data-sub="sejarah">Sejarah Singkat</button><button data-sub="struktur-org">Struktur Organisasi</button><button data-sub="yayasan">Yayasan Sebagai Pembina</button><button data-sub="struktur">Ustadz/Ustadzah</button><button data-sub="tendik">Tenaga Kependidikan</button><button data-sub="kurikulum">Kurikulum</button></div>
 
     <article class="subpage" data-page="profil" data-sub="sejarah">
       <h2 style="font-size:1.5rem">Sejarah Singkat</h2>
@@ -374,18 +374,38 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
       <div class="struktur-grid" id="strukturGrid"></div>
     </article>
 
+    <article class="subpage" data-page="profil" data-sub="yayasan">
+      <h2 style="font-size:1.5rem">Yayasan Sebagai Pembina</h2>
+      <p class="desc">Dewan pembina yayasan yang menaungi madrasah.</p>
+      <button class="btn-toggle-foto" id="btn-yayasan" onclick="toggleFotoGroup('yayasan')">
+        <svg class="icon chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        <span id="btnLabel-yayasan">Tampilkan Foto Pembina Yayasan</span>
+      </button>
+      <div class="foto-toggle-grid" id="galeri-yayasan"></div>
+    </article>
+
     <article class="subpage" data-page="profil" data-sub="struktur">
       <h2 style="font-size:1.5rem">Dewan Asatidz</h2>
       <p class="desc">Tenaga pengajar yang membimbing santri setiap hari.</p>
-      <button class="btn-ustadz" id="btn-ustadz" onclick="toggleUstadz()">
+      <button class="btn-toggle-foto" id="btn-ustadz" onclick="toggleFotoGroup('ustadz')">
         <svg class="icon chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-        <span id="btnUstadzLabel">Tampilkan Foto Ustadz/Ustadzah</span>
+        <span id="btnLabel-ustadz">Tampilkan Foto Ustadz/Ustadzah</span>
       </button>
-      <div id="galeri-ustadz"></div>
+      <div class="foto-toggle-grid" id="galeri-ustadz"></div>
+    </article>
+
+    <article class="subpage" data-page="profil" data-sub="tendik">
+      <h2 style="font-size:1.5rem">Tenaga Kependidikan</h2>
+      <p class="desc">Staf administrasi dan penunjang kegiatan madrasah.</p>
+      <button class="btn-toggle-foto" id="btn-tendik" onclick="toggleFotoGroup('tendik')">
+        <svg class="icon chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        <span id="btnLabel-tendik">Tampilkan Foto Tenaga Kependidikan</span>
+      </button>
+      <div class="foto-toggle-grid" id="galeri-tendik"></div>
     </article>
 
     <article class="subpage" data-page="profil" data-sub="kurikulum">
-      <h2 style="font-size:1.5rem">Kurikulum mengacu Permenag No. 13 Th 2014 dan Pedoman Dirjen Pendis th 2022</h2>
+      <h2 style="font-size:1.5rem">Kurikulum &amp; Program</h2>
       <table class="tbl" style="margin-top:24px">
         <thead><tr><th>Mapel</th><th>Jenjang</th><th>Fokus</th></tr></thead>
         <tbody>
@@ -595,14 +615,14 @@ const KONFIGURASI = {
 
   // Tambah/ganti video: isi ID file video Google Drive
   galeriVideo: [
-    "1aU52lcVWZQQvgtkbX7gCTVz6sYgdkHZl",
+    "1i_EbjKjUX7zjvfhcehcKBsUTZS3CUKnh",
     "10PXXnfThkvx3-ycW8T1mRg6M_Vf0jBhN"
   ],
 
   // Foto bagan struktur organisasi. Isi null jika belum ada fotonya.
   strukturOrg: [
     "12YlwLWiQdJ7SoKjRz1WYt8LfKxVcX7XZ",
-    "1aU52lcVWZQQvgtkbX7gCTVz6sYgdkHZl"
+    null
   ],
 
   // Dewan asatidz: tambah baris baru untuk menambah ustadz/ustadzah
@@ -615,12 +635,35 @@ const KONFIGURASI = {
     { id: "1KrmOfbroNZi53xNNUhExBysZCvbYHUiD", nama: "Ustadz 6" },
     { id: "14mMFkVrI7NxaBbbjCYahHSeQZtYE6ZnB", nama: "Ustadz 7" },
     { id: "1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u", nama: "Ustadz 8" }
+  ],
+
+  // DUMMY SEMENTARA — foto masih pinjam dari array "ustadz" di atas.
+  // Nanti tinggal ganti "id" dan "nama" di bawah ini dengan foto Pembina Yayasan yang asli,
+  // caranya sama seperti mengedit array "ustadz" (lihat tutorial).
+  yayasan: [
+    { id: "1hho4n8kIkUyvgDDPryNl0Q6dmyxCbbgH", nama: "Pembina Yayasan 1" },
+    { id: "1LpVq2evJKj3wMLHU8htIQ9Tsk-Q6-gdg", nama: "Pembina Yayasan 2" },
+    { id: "1VE19d3zy6saWHJ89WwfQQcveBG90GuWv", nama: "Pembina Yayasan 3" },
+    { id: "1ptXqugzQinNJaaYyju0IgJlsju-2Tj6u", nama: "Pembina Yayasan 4" },
+    { id: "1MFP7TIdhsaOrAHOuETOlJRG_TBWoxi84", nama: "Pembina Yayasan 5" },
+    { id: "1KrmOfbroNZi53xNNUhExBysZCvbYHUiD", nama: "Pembina Yayasan 6" }
+  ],
+
+  // DUMMY SEMENTARA — foto masih pinjam dari array "ustadz" di atas.
+  // Nanti tinggal ganti "id" dan "nama" di bawah ini dengan foto Tenaga Kependidikan yang asli.
+  tendik: [
+    { id: "14mMFkVrI7NxaBbbjCYahHSeQZtYE6ZnB", nama: "Tenaga Kependidikan 1" },
+    { id: "1tOA6kzTuts0ZDwYEKh25ucp5Ub3sIe-u", nama: "Tenaga Kependidikan 2" },
+    { id: "1hho4n8kIkUyvgDDPryNl0Q6dmyxCbbgH", nama: "Tenaga Kependidikan 3" },
+    { id: "1LpVq2evJKj3wMLHU8htIQ9Tsk-Q6-gdg", nama: "Tenaga Kependidikan 4" },
+    { id: "1VE19d3zy6saWHJ89WwfQQcveBG90GuWv", nama: "Tenaga Kependidikan 5" },
+    { id: "1ptXqugzQinNJaaYyju0IgJlsju-2Tj6u", nama: "Tenaga Kependidikan 6" }
   ]
 };
 
 const NAVDATA = {
   beranda:{label:"BERANDA",subs:{sambutan:"Sambutan",visimisi:"Visi Misi",berita:"Berita"}},
-  profil:{label:"PROFIL",subs:{sejarah:"Sejarah","struktur-org":"Struktur Organisasi",struktur:"Ustadz/Ustadzah",kurikulum:"Kurikulum"}},
+  profil:{label:"PROFIL",subs:{sejarah:"Sejarah","struktur-org":"Struktur Organisasi",yayasan:"Yayasan Sebagai Pembina",struktur:"Ustadz/Ustadzah",tendik:"Tenaga Kependidikan",kurikulum:"Kurikulum"}},
   galeri:{label:"GALERI",subs:{foto:"Galeri Foto",video:"Galeri Video",prestasi:"Prestasi"}},
   pendaftaran:{label:"PENDAFTARAN",subs:{syarat:"Syarat & Cara",formulir:"Formulir Online",biaya:"Biaya & Jadwal"}},
   kontak:{label:"KONTAK",subs:{"kontak-person":"Kontak Person",lokasi:"Alamat & Lokasi",medsos:"Media Sosial"}}
@@ -685,13 +728,19 @@ function toggleMobileMenu(){
   document.getElementById('burgerBtn').classList.toggle('open');
 }
 
-function toggleUstadz(){
-  const g=document.getElementById('galeri-ustadz'), b=document.getElementById('btn-ustadz');
+const FOTO_LABELS = {
+  ustadz:  { show:"Tampilkan Foto Ustadz/Ustadzah",        hide:"Sembunyikan Foto Ustadz/Ustadzah" },
+  yayasan: { show:"Tampilkan Foto Pembina Yayasan",         hide:"Sembunyikan Foto Pembina Yayasan" },
+  tendik:  { show:"Tampilkan Foto Tenaga Kependidikan",     hide:"Sembunyikan Foto Tenaga Kependidikan" }
+};
+function toggleFotoGroup(key){
+  const g=document.getElementById('galeri-'+key), b=document.getElementById('btn-'+key), lbl=document.getElementById('btnLabel-'+key);
   if(!g) return;
   g.classList.toggle('tampil');
   b.classList.toggle('open');
-  document.getElementById('btnUstadzLabel').textContent = g.classList.contains('tampil') ? 'Sembunyikan Foto Ustadz/Ustadzah' : 'Tampilkan Foto Ustadz/Ustadzah';
-  if(g.classList.contains('tampil')) g.scrollIntoView({behavior:'smooth',block:'start'});
+  const shown = g.classList.contains('tampil');
+  lbl.textContent = shown ? FOTO_LABELS[key].hide : FOTO_LABELS[key].show;
+  if(shown) g.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function openLightbox(src){
@@ -738,8 +787,10 @@ function renderStruktur(){
     `<div class="struktur-card"><div class="struktur-empty"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-11 11"/></svg><p>Bagan belum tersedia</p></div></div>`
   ).join('');
 }
-function renderUstadz(){
-  document.getElementById('galeri-ustadz').innerHTML = KONFIGURASI.ustadz.map(u=>
+function renderFotoGroup(containerId, list){
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  el.innerHTML = list.map(u=>
     `<div class="card-ustadz"><img src="https://drive.google.com/thumbnail?id=${u.id}&sz=w300-h375" alt="${u.nama}" loading="lazy"><div class="nama">${u.nama}</div></div>`
   ).join('');
 }
@@ -809,7 +860,9 @@ buildNav();
 renderGaleriFoto();
 renderGaleriVideo();
 renderStruktur();
-renderUstadz();
+renderFotoGroup('galeri-ustadz', KONFIGURASI.ustadz);
+renderFotoGroup('galeri-yayasan', KONFIGURASI.yayasan);
+renderFotoGroup('galeri-tendik', KONFIGURASI.tendik);
 renderKontakPerson();
 renderLokasi();
 renderMedsos();
@@ -845,4 +898,5 @@ document.addEventListener('keydown', e=>{
 </script>
 </body>
 </html>
+
 
