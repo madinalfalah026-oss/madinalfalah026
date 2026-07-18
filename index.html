@@ -674,99 +674,113 @@ footer a:hover{color:var(--gold-light);}
     </div>
   </section>
 <!-- ============================================================
-       4. KONTAK - FINAL 2 SUB HALAMAN - WA OTOMATIS & MAP - PASTE
+       4. KONTAK - FINAL 3 TOMBOL - WA, MAP, MEDSOS - TINGGAL PASTE
   ============================================================ -->
 <section class="page-section" data-page="kontak">
   <div class="container">
     <div class="page-head">
       <div class="eyebrow">Kontak</div>
       <h2>Hubungi Kami</h2>
-      <p class="desc">Silakan hubungi pengurus Madin Al Falah melalui WhatsApp atau datang langsung ke lokasi.</p>
+      <p class="desc">Hubungi pengurus, datang ke lokasi, atau ikuti media sosial resmi Madin Al Falah.</p>
     </div>
 
     <style>
       .subnav[data-subnav="kontak"]{display:flex!important;flex-wrap:wrap!important;gap:8px!important;}
-      .subnav[data-subnav="kontak"] button{flex:1 1 auto!important;min-width:130px;padding:10px 14px!important;border-radius:8px;border:1px solid #d9e2dc;background:#f6f8f7;font-weight:600;cursor:pointer}
+      .subnav[data-subnav="kontak"] button{flex:1 1 auto!important;min-width:110px;padding:10px 12px!important;border-radius:8px;border:1px solid #d9e2dc;background:#f6f8f7;font-weight:600;cursor:pointer;font-size:13px}
       .subnav[data-subnav="kontak"] button.active{background:#0d6e3f!important;color:#fff!important;border-color:#0d6e3f!important;}
-
       .page-section[data-page="kontak"] .subpage{display:none!important;}
       .page-section[data-page="kontak"] .subpage.active{display:block!important;animation:fadeIn .25s ease;}
-
+      
       .kontak-card{background:#fff;border:1px solid #eee;border-radius:14px;padding:18px;box-shadow:0 4px 14px rgba(0,0,0,.05);margin-top:16px;display:flex;align-items:center;gap:14px}
       .kontak-icon{width:48px;height:48px;background:#e6f4eb;color:#0d6e3f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-      .kontak-info{flex:1}
-      .kontak-info h4{margin:0 0 4px;font-size:15px}
-      .kontak-info p{margin:0;color:#666;font-size:13px}
       .btn-wa{display:inline-block;margin-top:8px;background:#25D366;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px}
-      .btn-wa:hover{background:#1ebe5d}
       .btn-telp{display:inline-block;margin-top:8px;margin-left:6px;background:#f1f1f1;color:#333;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px;border:1px solid #ddd}
 
       .map-wrap{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);margin-top:18px;text-align:center}
-      .map-wrap img{width:100%;max-width:600px;height:auto;max-height:400px;object-fit:cover;display:block;margin:0 auto;background:#f2f2f2}
+      .map-wrap img{width:100%;max-width:600px;max-height:400px;object-fit:cover;display:block;margin:0 auto}
       .map-link{display:block;padding:14px;background:#0d6e3f;color:#fff;text-decoration:none;font-weight:700;text-align:center}
-      .map-link:hover{background:#0a5732}
+
+      /* MEDSOS */
+      .medsos-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+      @media(min-width:600px){.medsos-grid{grid-template-columns:repeat(4,1fr)}}
+      .medsos-card{background:#fff;border:1px solid #eee;border-radius:14px;padding:18px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.05);text-decoration:none;transition:.2s}
+      .medsos-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+      .medsos-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 10px;color:#fff}
+      .ig{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+      .fb{background:#1877F2}
+      .yt{background:#FF0000}
+      .tt{background:#000000}
+      .medsos-card h4{margin:0;font-size:14px;color:#222}
+      .medsos-card p{margin:4px 0 0;font-size:12px;color:#777}
       @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
     </style>
 
     <div class="subnav" data-subnav="kontak">
       <button data-sub="kontak-person" class="active">Kontak Person</button>
       <button data-sub="lokasi">Lokasi</button>
+      <button data-sub="medsos">Media Sosial</button>
     </div>
 
-    <!-- 4.1 Kontak Person - KLIK LANGSUNG WA OTOMATIS -->
+    <!-- 4.1 Kontak Person -->
     <article class="subpage active" data-page="kontak" data-sub="kontak-person">
       <h2 style="font-size:1.5rem;">Kontak Person</h2>
-      <p style="margin-top:6px;color:#666;font-size:13px">Klik tombol WhatsApp, chat akan otomatis terisi. Atau klik Telepon untuk langsung menelepon.</p>
-
-      <!-- KONTAK 1 -->
       <div class="kontak-card">
         <div class="kontak-icon">📱</div>
-        <div class="kontak-info">
-          <h4>Pengurus 1 - Madin Al Falah</h4>
-          <p>0811-3666-460; Bunda Sri Martiana</p>
-          <!-- Pesan otomatis yang akan terkirim -->
-          <a class="btn-wa" target="_blank" href="https://wa.me/628113666460?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a>
-          <a class="btn-telp" href="tel:+628113666460">📞 Telepon</a>
-        </div>
+        <div style="flex:1"><h4 style="margin:0 0 4px">Pengurus 1</h4><p style="margin:0;color:#666;font-size:13px">0811-3666-460</p><a class="btn-wa" target="_blank" href="https://wa.me/628113666460?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a><a class="btn-telp" href="tel:+628113666460">📞 Telepon</a></div>
       </div>
-
-      <!-- KONTAK 2 -->
       <div class="kontak-card">
         <div class="kontak-icon">📱</div>
-        <div class="kontak-info">
-          <h4>Pengurus 2 - Madin Al Falah</h4>
-          <p>0812-3347-7600; Bunda Agustin Rahmad</p>
-          <a class="btn-wa" target="_blank" href="https://wa.me/6281123392370?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a>
-          <a class="btn-telp" href="tel:+6281233477600">📞 Telepon</a>
-        </div>
-      </div>
-
-      <div style="margin-top:18px;background:#f0faf4;border:1px dashed #a8d5ba;padding:12px;border-radius:10px;font-size:13px;color:#2d5a3d">
-        ℹ️ Pesan otomatis yang terkirim adalah: <br><i>"Assalamualaikum, saya ingin bertanya tentang Madin Al Falah"</i><br>
-        Jika ingin balasan otomatis dari Admin berbunyi <b>"Asalamualaikum, ini dengan Madin Al Falah, apa ada yang bisa saya bantu..?"</b> itu diatur di pengaturan WhatsApp Business -> Pesan Sapaan Otomatis, bukan dari website.
+        <div style="flex:1"><h4 style="margin:0 0 4px">Pengurus 2</h4><p style="margin:0;color:#666;font-size:13px">0811-2339-2370</p><a class="btn-wa" target="_blank" href="https://wa.me/6281123392370?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20tentang%20Madin%20Al%20Falah">💬 WhatsApp</a><a class="btn-telp" href="tel:+6281123392370">📞 Telepon</a></div>
       </div>
     </article>
 
-   <!-- 4.2 Lokasi - FINAL SUDAH TERPASANG LINK ASLI -->
+    <!-- 4.2 Lokasi - SUDAH PAKAI LINK ASLI KAMU -->
     <article class="subpage" data-page="kontak" data-sub="lokasi">
       <h2 style="font-size:1.5rem;">Lokasi Madrasah</h2>
-      <p style="margin-top:6px;color:#666;font-size:13px">Klik gambar atau tombol di bawah untuk membuka Google Maps.</p>
-
+      <p style="margin-top:6px;color:#666;font-size:13px">Klik gambar untuk buka Google Maps.</p>
       <div class="map-wrap">
-        <!-- FOTO PETA SUDAH TERPASANG - 600x400 -->
         <a href="https://maps.app.goo.gl/VeQthZZus3WdVdDP6" target="_blank">
-          <img src="https://drive.google.com/thumbnail?id=1jtie-Ox8_19VrXwzIip4GDT_bLvk_2F-&sz=w600-h400" alt="Peta Lokasi Madin Al Falah">
+          <img src="https://drive.google.com/thumbnail?id=1jtie-Ox8_19VrXwzIip4GDT_bLvk_2F-&sz=w600-h400" alt="Peta Lokasi">
         </a>
-        <!-- LINK MAP ASLI SUDAH TERPASANG -->
-        <a class="map-link" target="_blank" href="https://maps.app.goo.gl/VeQthZZus3WdVdDP6">
-          📍 Buka di Google Maps - Klik Disini
+        <a class="map-link" target="_blank" href="https://maps.app.goo.gl/VeQthZZus3WdVdDP6">📍 Buka di Google Maps - Klik Disini</a>
+      </div>
+      <div style="margin-top:16px;font-size:14px;line-height:1.6"><b>Alamat:</b><br>Jl. Kendalisodo No. 25, Kota Malang, Jawa Timur</div>
+    </article>
+
+    <!-- 4.3 Media Sosial - BARU -->
+    <article class="subpage" data-page="kontak" data-sub="medsos">
+      <h2 style="font-size:1.5rem;">Media Sosial Resmi</h2>
+      <p style="margin-top:6px;color:#666;font-size:13px">Ikuti kegiatan terbaru Madin Al Falah di media sosial.</p>
+      
+      <div class="medsos-grid">
+        <!-- INSTAGRAM - GANTI LINK -->
+        <a class="medsos-card" href="https://instagram.com/username_madin" target="_blank">
+          <div class="medsos-icon ig">📷</div>
+          <h4>Instagram</h4>
+          <p>@madinalfalah</p>
+        </a>
+        <!-- FACEBOOK - GANTI LINK -->
+        <a class="medsos-card" href="https://facebook.com/username_madin" target="_blank">
+          <div class="medsos-icon fb">f</div>
+          <h4>Facebook</h4>
+          <p>Madin Al Falah</p>
+        </a>
+        <!-- YOUTUBE - GANTI LINK -->
+        <a class="medsos-card" href="https://youtube.com/@username_madin" target="_blank">
+          <div class="medsos-icon yt">▶</div>
+          <h4>YouTube</h4>
+          <p>Madin Al Falah</p>
+        </a>
+        <!-- TIKTOK - GANTI LINK -->
+        <a class="medsos-card" href="https://tiktok.com/@username_madin" target="_blank">
+          <div class="medsos-icon tt">♪</div>
+          <h4>TikTok</h4>
+          <p>@madinalfalah</p>
         </a>
       </div>
 
-      <div style="margin-top:16px;font-size:14px;line-height:1.6">
-        <b>Alamat:</b><br>
-        Madrasah Diniyah Al Falah<br>
-        Jl. Kendalisodo No. 25, Kota Malang, Jawa Timur
+      <div style="margin-top:20px;background:#f0faf4;border:1px dashed #a8d5ba;padding:12px;border-radius:10px;font-size:12px;color:#2d5a3d">
+        Cara ganti link: Ganti <code>https://instagram.com/username_madin</code> dengan link asli Instagram, Facebook, YouTube dan TikTok madrasah.
       </div>
     </article>
 
@@ -775,14 +789,11 @@ footer a:hover{color:var(--gold-light);}
         var nav=document.querySelector('.subnav[data-subnav="kontak"]');
         if(!nav) return;
         nav.addEventListener('click',function(e){
-          var btn=e.target.closest('button[data-sub]');
-          if(!btn) return;
-          var target=btn.getAttribute('data-sub');
-          nav.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
-          btn.classList.add('active');
-          document.querySelectorAll('.page-section[data-page="kontak"] .subpage').forEach(p=>{
-            p.classList.toggle('active', p.getAttribute('data-sub')===target);
-          });
+          var b=e.target.closest('button[data-sub]'); if(!b) return;
+          var t=b.getAttribute('data-sub');
+          nav.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          document.querySelectorAll('.page-section[data-page="kontak"] .subpage').forEach(p=>{p.classList.toggle('active',p.getAttribute('data-sub')===t)});
         });
       })();
     </script>
