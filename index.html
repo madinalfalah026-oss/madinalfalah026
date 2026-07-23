@@ -396,8 +396,8 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
     </article>
 
     <article class="subpage" data-page="profil" data-sub="tendik">
-      <h2 style="font-size:1.5rem">Pejabat dan Staf MTDU Al Falah</h2>
-      <p class="desc">Pejabat dan Staf MTDU Al Falah .</p>
+      <h2 style="font-size:1.5rem">Pejabat dan Staf MDTU Al Falah</h2>
+      <p class="desc">Pejabat dan Staf MDTU Al Falah .</p>
       <button class="btn-toggle-foto" id="btn-tendik" onclick="toggleFotoGroup('tendik')">
         <svg class="icon chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         <span id="btnLabel-tendik">Tampilkan Foto Pejabat dan Staf </span>
@@ -478,9 +478,9 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
     </article>
 
     <article class="subpage" data-page="pendaftaran" data-sub="formulir">
-      <h2 style="font-size:1.5rem">Formulir Online</h2>
+      <h2 style="font-size:1.5rem">Formulir Online KLIK HALAMAN DIBAWAH</h2>
       <div class="form-wrap" style="margin-top:20px"><iframe id="googleFormEmbed" src="" title="Formulir Pendaftaran"></iframe></div>
-      <p class="form-note">Form tidak muncul? <a id="googleFormFallback" href="#" target="_blank" rel="noopener">Buka di tab baru</a></p>
+      <p class="form-note">Form tidak muncul? KLIK DISINI --><a id="googleFormFallback" href="#" target="_blank" rel="noopener">Buka di tab baru</a></p>
     </article>
 
     <article class="subpage" data-page="pendaftaran" data-sub="biaya">
@@ -632,10 +632,10 @@ const KONFIGURASI = {
   // Dewan asatidz: tambah baris baru untuk menambah ustadz/ustadzah
   ustadz: [
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "USTADZ- AZHAR BAGAS.A-GURU HADITS" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "USTADZ- PURWADI-GURU AKHLAK" },
+    { id: "1MNs82yt3Q2fpVSM62DNTcWg82liOpGQL", nama: "USTADZ- PURWADI-GURU AKHLAK" },
     { id: "15qlrroGc6P1IxUJ58gjqiH6UFJBmzAak", nama: "USTADZ- IMAM SUGIANTO.SE.MM.-GURU AL QURAN" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "USTADZAH SALWA SAFIRA.A.-GURU FIQIH" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "USTADZAH- NANIK ZUBAIDAH-GURU TARIKH" },
+    { id: "1UtrGWJ65y97R3vgMYheUZ4Qveuuh0ll9", nama: "USTADZAH-HANUM SYAKIRA-GURU FIQIH" },
+    { id: "10Kdk2-p4ambm1-yr368llhj_i6Wt8dgU", nama: "USTADZAH- NANIK ZUBAIDAH-GURU TARIKH" },
     { id: "1OWPwKmI0oBrUFCO2FVTkFQT6tTA_YKlT", nama: "USTADZAH- HJ. MIMI JAWIYAH-GURU AL QURAN" },
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Ustadz --" },
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Ustadz 8" }
@@ -656,12 +656,12 @@ const KONFIGURASI = {
   // DUMMY SEMENTARA — foto masih pinjam dari array "ustadz" di atas.
   // Nanti tinggal ganti "id" dan "nama" di bawah ini dengan foto Tenaga Kependidikan yang asli.
   tendik: [
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "DR. ANDI NUGRAHA-KEPALA MADIN" },
+    { id: "1eRWjeIfnfwVKkzKMsgrW5b4lzr6N3tMQ", nama: "DR. ANDI NUGRAHA-KEPALA MADIN" },
     { id: "1OWPwKmI0oBrUFCO2FVTkFQT6tTA_YKlT", nama: "Hj. MIMI JAWIYAH-WAKIL KEPALA MADIN" },
     { id: "1QGQllUTaLLtkL5ThNurf1rfYXGD89grS", nama: "Dra. AGUSTININGSIH-SEKRETARIS" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Dra. HENY TRIWIDYASTUTI-SEKRETARIS" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "ARIS NURILA-BENDAHARA" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "INTAN AGUSTINI., SE-BENDAHARA" }
+    { id: "15SrNpkEWPDEqK_ePwMKB8ExcCH70tizz", nama: "Dra. HENY TRIWIDYASTUTI-SEKRETARIS" },
+    { id: "1sIJ29XzgSjQ4-oPag6olkL44dLaX5rzk", nama: "ARIS NURILA-BENDAHARA" },
+    { id: "1wVmteAN8rgcAMdvBuV5eXf0x1iDRUObT", nama: "INTAN AGUSTINI., SE-BENDAHARA" }
   ]
 };
 
@@ -735,7 +735,7 @@ function toggleMobileMenu(){
 const FOTO_LABELS = {
   ustadz:  { show:"Tampilkan Foto Ustadz/Ustadzah",        hide:"Sembunyikan Foto Ustadz/Ustadzah" },
   yayasan: { show:"Tampilkan Foto Pembina Yayasan",         hide:"Sembunyikan Foto Pembina Yayasan" },
-  tendik:  { show:"Tampilkan Foto Tenaga Kependidikan",     hide:"Sembunyikan Foto Tenaga Kependidikan" }
+  tendik:  { show:"Tampilkan Foto Pimpinan dan Staf",     hide:"Sembunyikan Foto Pimpinan dan Staf" }
 };
 function toggleFotoGroup(key){
   const g=document.getElementById('galeri-'+key), b=document.getElementById('btn-'+key), lbl=document.getElementById('btnLabel-'+key);
