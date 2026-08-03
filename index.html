@@ -244,6 +244,21 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
 .medsos-card h4{margin:0;font-size:.92rem;color:var(--emerald-deep)}
 .medsos-card p{margin:4px 0 0;font-size:.78rem;color:var(--ink-soft)}
 
+/* ============ REFERENSI ============ */
+.pdf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:24px}
+.pdf-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.pdf-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pdf-icon-wrap{width:48px;height:48px;background:rgba(217,83,79,.1);color:#d9534f;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.pdf-icon-wrap .icon{width:26px;height:26px}
+.pdf-title{font-size:1rem;font-weight:700;color:var(--emerald-deep);margin-bottom:6px;line-height:1.3}
+.pdf-desc{font-size:.84rem;color:var(--ink-soft);margin-bottom:16px;flex-grow:1}
+.pdf-actions{display:flex;gap:10px}
+.btn-pdf{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 14px;border-radius:8px;font-size:.8rem;font-weight:700;transition:.2s;flex:1;text-align:center}
+.btn-pdf-view{background:var(--sage);color:var(--emerald-deep)}
+.btn-pdf-view:hover{background:#d0dcd4}
+.btn-pdf-download{background:var(--emerald);color:#fff}
+.btn-pdf-download:hover{background:var(--emerald-soft)}
+
 /* ============ FLOATING UI ============ */
 .fab-stack{position:fixed;right:22px;bottom:22px;z-index:200;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
 .fab{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.35);cursor:pointer;border:none;transition:transform .2s var(--ease)}
@@ -408,13 +423,14 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
     <article class="subpage" data-page="profil" data-sub="kurikulum">
       <h2 style="font-size:1.5rem">Kurikulum Mengacu Permenag No. 13 Thn 2014 dan Pedoman Dirjen Pendis Th. 2022</h2>
       <table class="tbl" style="margin-top:24px">
-        <thead><tr><th>Mapel</th><th>Jenjang</th><th>Fokus</th></tr></thead>
+        <thead><tr><th>Mata Pelajaran</th><th>Cakupan Materi Esensial</th><th>Kelas</th></tr></thead>
         <tbody>
-          <tr><td>Tahsin &amp; Tahfidz</td><td>Ula 1–2</td><td> Teori dan Praktek Tartil &amp; hafalan</td></tr>
-          <tr><td>Aqidah Akhlak</td><td>Ula 1–2</td><td>Teori dan Praktek Keimanan &amp; perilaku</td></tr>
-          <tr><td>Fikih Ibadah</td><td>Ula 1–2</td><td>Teori dan Praktek Shalat, wudhu, puasa</td></tr>
-          <tr><td>Bahasa Arab</td><td>Ula 3–4</td><td>Teori dan Praktek Kosakata &amp; teks</td></tr>
-          <tr><td>SKI</td><td>Ula 3–4</td><td>Teori dan Praktek membuat tulisan Kisah Nabi dan Sahabat</td></tr>
+          <tr><td>Al Quran</td><td>Tahsin, Tajwid & Hafalan Juz 30</td><td>Ula - Tahun 1-2</td></tr>
+          <tr><td>Hadist </td><td>Hadist Harian & Arbain Nawawi</td><td>Ula - Tahun 1-2</td></tr>
+          <tr><td>Aqidah & Akhlak </td><td>Rukun Imam, Sifat Wajib, Akhlak Madmudah & Madzmunah</td><td>Ula - Tahun 1-2</td></tr>
+          <tr><td>Fiqih</td><td>Mahmudah dan Muamalala</td><td>Ula - Tahun 1-2</td></tr>Ula - Tahun 1-2</td></tr>
+          <tr><td>Tarikh (SKI)</td><td>Sirah Nabawiyah & Khulafah </td><td>Ula - Tahun 1-2</td></tr>
+          <><td>Bahasa Arab</td><td>Mufradat, Qawaid, Insya'</td><td>Ula - Tahun 1-2</td></tr>
         </tbody>
       </table>
     </article>
@@ -537,6 +553,31 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
   </div>
 </section>
 
+<!-- REFERENSI -->
+<section class="page-section" data-page="referensi">
+  <div class="container">
+    <div class="page-head">
+      <div class="eyebrow">Referensi</div>
+      <h2>Dokumen &amp; Pedoman</h2>
+      <p class="desc">Kumpulan regulasi, buku pedoman, dan dokumen resmi madrasah dalam format PDF.</p>
+    </div>
+    <div class="subnav" data-subnav="referensi">
+      <button data-sub="pedoman">Buku Pedoman</button>
+      <button data-sub="peraturan">Peraturan &amp; Regulasi</button>
+    </div>
+
+    <article class="subpage" data-page="referensi" data-sub="pedoman">
+      <h2 style="font-size:1.5rem">Buku Pedoman</h2>
+      <div class="pdf-grid" id="pdfPedomanGrid"></div>
+    </article>
+
+    <article class="subpage" data-page="referensi" data-sub="peraturan">
+      <h2 style="font-size:1.5rem">Peraturan &amp; Regulasi</h2>
+      <div class="pdf-grid" id="pdfPeraturanGrid"></div>
+    </article>
+  </div>
+</section>
+
 <footer>
   <div class="container foot-grid">
     <div>
@@ -550,6 +591,7 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
       <a class="footlink" href="#galeri-foto" onclick="gotoPage('galeri','foto')">Galeri</a>
       <a class="footlink" href="#pendaftaran-formulir" onclick="gotoPage('pendaftaran','formulir')">Pendaftaran</a>
       <a class="footlink" href="#kontak-lokasi" onclick="gotoPage('kontak','lokasi')">Kontak</a>
+      <a class="footlink" href="#referensi-pedoman" onclick="gotoPage('referensi','pedoman')">Referensi</a>
     </div>
     <div>
       <h4>Kontak</h4>
@@ -578,12 +620,8 @@ footer a.footlink:hover{opacity:1;color:var(--gold-light);transform:translateX(3
 <script>
 /* ======================================================================
    PUSAT PENGATURAN — ubah data di sini untuk memperbarui isi situs.
-   Tidak perlu menyentuh HTML di atas untuk hal-hal berikut:
-   - Kontak person, alamat, peta, media sosial
-   - Foto galeri, video galeri, foto struktur organisasi, foto ustadz/ustadzah
    ====================================================================== */
 const KONFIGURASI = {
-  // Logo yang tampil di pojok kiri atas header. Ganti ID-nya untuk mengganti logo.
   logoId: "1pkYjfbUICJLA6Hf2cxbhvXEVndnxvtPP",
 
   alamat: "Jl. Kendalisodo No. 25, Kota Malang, Jawa Timur",
@@ -593,13 +631,11 @@ const KONFIGURASI = {
   googleFormEmbedSrc: "https://docs.google.com/forms/d/e/1FAIpQLSefFK720WBdQ-i1P7bUmJFyu3Ueaqs1TtIBMVMS-xIouO8v6w/viewform?usp=sharing&ouid=112565987319857083453",
   googleFormViewUrl: "https://docs.google.com/forms/d/e/1FAIpQLSefFK720WBdQ-i1P7bUmJFyu3Ueaqs1TtIBMVMS-xIouO8v6w/viewform?",
 
-  // Kontak person yang tampil di tab "Kontak Person"
   pengurus: [
     { nama: "Bunda Sri Martiana", telp: "0811-3666-460", wa: "628113666460" },
     { nama: "Bunda Agustin Rahmad", telp: "081233477600", wa: "6281233477600" }
   ],
 
-  // Ganti dengan tautan resmi madrasah
   medsos: {
     instagram: "https://instagram.com/alfalahmalang",
     facebook: "https://facebook.com/alfalahmalang",
@@ -607,7 +643,6 @@ const KONFIGURASI = {
     tiktok: "https://tiktok.com/@alfalahmalang"
   },
 
-  // Tambah/ganti foto: cukup tambah/hapus ID Google Drive pada array ini
   galeriFoto: [
     "15Q7MOhgrUnkjJBOnDLA9Pi-ETB02y8mZ",
     "1ry_eGWxBA47Yox72PlfgBPhOdZ9Q4t2V",
@@ -617,19 +652,17 @@ const KONFIGURASI = {
     "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC"
   ],
 
-  // Tambah/ganti video: isi ID file video Google Drive
   galeriVideo: [
     "1i_EbjKjUX7zjvfhcehcKBsUTZS3CUKnh",
-    "10PXXnfThkvx3-ycW8T1mRg6M_Vf0jBhN"
+    "1kuhR3yd7dFG2xoGeRXMyXzW-OELvtk28",
+    "1MKvskylv-hcq1toF6yWXMjkfZ19yvKe7"
   ],
 
-  // Foto bagan struktur organisasi. Isi null jika belum ada fotonya.
   strukturOrg: [
     "1zXDhJyU6El0kQUPYRFLFWWtlgJ7I4T8d",
     "1E5Sg1yK1Il41TPP9X-ax2IF_-bzR7Z1r"
   ],
 
-  // Dewan asatidz: tambah baris baru untuk menambah ustadz/ustadzah
   ustadz: [
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "USTADZ- AZHAR BAGAS.A-GURU HADITS" },
     { id: "1MNs82yt3Q2fpVSM62DNTcWg82liOpGQL", nama: "USTADZ- PURWADI-GURU AKHLAK" },
@@ -641,20 +674,15 @@ const KONFIGURASI = {
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Ustadz 8" }
   ],
 
-  // DUMMY SEMENTARA — foto masih pinjam dari array "ustadz" di atas.
-  // Nanti tinggal ganti "id" dan "nama" di bawah ini dengan foto Pembina Yayasan yang asli,
-  // caranya sama seperti mengedit array "ustadz" (lihat tutorial).
   yayasan: [
     { id: "1EduP1NZjWR8XI3KsGkA5n2B1PrD91X_p", nama: "IMAM JAJULI-Ketua Takmir" },
-    { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "SUMARSONO" },
+    { id: "1Ht4Sa5KKKtE04hrhX5yUW-FAqTo3p894", nama: "DJOKO KUSTONO-Pembina Yayasan" },
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "ALFIAN" },
     { id: "1BZQ4SIhBEHSAdyw91aAO3rJ8Ehx5jtpH", nama: "SRI MARTIANA-Urusan Peran Wanita" },
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Pembina Yayasan 5" },
     { id: "1wikyKTiL_e8G2h2BaFguuz2il8S5PNsC", nama: "Pembina Yayasan 6" }
   ],
 
-  // DUMMY SEMENTARA — foto masih pinjam dari array "ustadz" di atas.
-  // Nanti tinggal ganti "id" dan "nama" di bawah ini dengan foto Tenaga Kependidikan yang asli.
   tendik: [
     { id: "1eRWjeIfnfwVKkzKMsgrW5b4lzr6N3tMQ", nama: "DR. ANDI NUGRAHA-KEPALA MADIN" },
     { id: "1OWPwKmI0oBrUFCO2FVTkFQT6tTA_YKlT", nama: "Hj. MIMI JAWIYAH-WAKIL KEPALA MADIN" },
@@ -662,7 +690,32 @@ const KONFIGURASI = {
     { id: "15SrNpkEWPDEqK_ePwMKB8ExcCH70tizz", nama: "Dra. HENY TRIWIDYASTUTI-SEKRETARIS" },
     { id: "1sIJ29XzgSjQ4-oPag6olkL44dLaX5rzk", nama: "ARIS NURILA-BENDAHARA" },
     { id: "1wVmteAN8rgcAMdvBuV5eXf0x1iDRUObT", nama: "INTAN AGUSTINI., SE-BENDAHARA" }
-  ]
+  ],
+
+  // Kumpulan PDF Referensi
+  referensi: {
+    pedoman: [
+      {
+        judul: "Buku Pedoman Penyelenggaraan MDT (2022)",
+    deskripsi: "Pedoman Penyelenggaraan Madrasah Diniyah Takmiliyah Kemenag RI Ditjen Pendis Tahun 2022.",
+    url: "https://drive.google.com/file/d/1Llcu27Y3uc1zaYd8GEaahwpCx4dpAl2d/view?usp=drive_link"
+      },
+      {
+        judul: "Anggaran Dasar dan Rumah Tangga MDTU Al Falah",
+        deskripsi: "Draf untuk uji publik dan diskusi",
+        url: "https://drive.google.com/file/d/1HyQEydJcBlYVFoiZ7JfBLEAxwyXN5JzZ/view?usp=drive_link"
+      }
+      
+    ],
+    
+    peraturan: [
+      {
+        judul: "PMA No. 13 Tahun 2014",
+        deskripsi: "Peraturan Menteri Agama tentang Pendidikan Keagamaan Islam.",
+        url: "https://drive.google.com/file/d/1o9WRYLtphaneA83vMNCpBOMoqgpaZO-R/view?usp=drive_link"
+      }
+    ]
+  }
 };
 
 const NAVDATA = {
@@ -670,7 +723,8 @@ const NAVDATA = {
   profil:{label:"PROFIL",subs:{sejarah:"Sejarah","struktur-org":"Struktur Organisasi",yayasan:"Yayasan Sebagai Pembina",struktur:"Ustadz/Ustadzah",tendik:"Tenaga Kependidikan",kurikulum:"Kurikulum"}},
   galeri:{label:"GALERI",subs:{foto:"Galeri Foto",video:"Galeri Video",prestasi:"Prestasi"}},
   pendaftaran:{label:"PENDAFTARAN",subs:{syarat:"Syarat & Cara",formulir:"Formulir Online",biaya:"Biaya & Jadwal"}},
-  kontak:{label:"KONTAK",subs:{"kontak-person":"Kontak Person",lokasi:"Alamat & Lokasi",medsos:"Media Sosial"}}
+  kontak:{label:"KONTAK",subs:{"kontak-person":"Kontak Person",lokasi:"Alamat & Lokasi",medsos:"Media Sosial"}},
+  referensi:{label:"REFERENSI",subs:{pedoman:"Buku Pedoman",peraturan:"Peraturan & Regulasi"}}
 };
 
 const ICON_CHEV = '<svg class="icon chev" viewBox="0 0 24 24" style="width:10px;height:10px"><path d="M6 9l6 6 6-6"/></svg>';
@@ -826,6 +880,28 @@ function renderKontakPerson(){
   </div>`;
   document.getElementById('kontakPersonGrid').innerHTML = cards + emailCard;
 }
+
+function renderReferensi(){
+  const renderList = (list) => list.map(item => `
+    <div class="pdf-card">
+      <div>
+        <div class="pdf-icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="pdf-title">${item.judul}</div>
+        <div class="pdf-desc">${item.deskripsi}</div>
+      </div>
+      <div class="pdf-actions">
+        <a href="${item.url}" target="_blank" rel="noopener" class="btn-pdf btn-pdf-view">Lihat PDF</a>
+        <a href="${item.url}" download class="btn-pdf btn-pdf-download">Unduh</a>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('pdfPedomanGrid').innerHTML = renderList(KONFIGURASI.referensi.pedoman);
+  document.getElementById('pdfPeraturanGrid').innerHTML = renderList(KONFIGURASI.referensi.peraturan);
+}
+
 function renderLokasi(){
   document.getElementById('mapImg').src = KONFIGURASI.mapsImage;
   document.getElementById('mapImgLink').href = KONFIGURASI.mapsUrl;
@@ -873,6 +949,7 @@ renderFotoGroup('galeri-ustadz', KONFIGURASI.ustadz);
 renderFotoGroup('galeri-yayasan', KONFIGURASI.yayasan);
 renderFotoGroup('galeri-tendik', KONFIGURASI.tendik);
 renderKontakPerson();
+renderReferensi();
 renderLokasi();
 renderMedsos();
 renderFooter();
